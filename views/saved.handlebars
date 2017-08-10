@@ -1,0 +1,64 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			{{!-- Creates the hamburger button --}}
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				{{!-- Creates the 3 lines for the hamburgers --}}
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">Mongo Scraper</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/">Home</a></li>
+				<li><a href="/saved">Saved Videos</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+{{!-- <img class="img-fluid" id="camera-image" src="static/assets/images/camera.jpg" alt="Camera Image"> --}}
+
+<div class="jumbotron jumbotron-fluid text-center">
+	<div class="container">
+		<h1 class="display-3">Saved Videos</h1>
+		<p class="lead">YouTube Trending Videos</p>
+	</div>
+</div>
+
+<section id="saved-videos-section">
+	<div class="container-fluid">
+
+		{{!-- Display all the trending videos in the database --}}
+		<div id="videos"></div>
+
+		{{!-- Modal for Video Comments --}}
+		<div id="video-comments" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="comment-header">Comments</h3>
+					</div>
+					<div class="modal-body">
+						<div class="modal-comments"></div>
+						<form class="comment-form">
+							<div class="form-group">
+								<input type="text" class="form-control comment-form-input" id="name-input" placeholder="Name">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control comment-form-input" rows="2" id="comment-input" placeholder="Comment"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary" id="submit-comment">Save Comment</button>							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+
+<script src="static/saved.js"></script>

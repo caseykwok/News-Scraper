@@ -1,8 +1,7 @@
 var mongoose = require("mongoose");
+// Set promise provider to bluebird
+mongoose.Promise = require("bluebird");
 var express = require("express");
-
-var request = require("request");
-var cheerio = require("cheerio");
 
 // Use Express to initialize server
 var app = express();
@@ -41,6 +40,10 @@ db.on("error", function(err) {
 db.once("open", function() {
 	console.log("Mongoose connection successful.");
 });
+
+// Import routes and allow server to access them
+var routes = require("./controllers/routes");
+app.use("/", routes);
 
 app.listen(PORT, function() {
 	console.log("App listening on PORT " + PORT);

@@ -1,0 +1,177 @@
+.navbar {
+	margin-bottom: 0px;
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -70px;
+	visibility: hidden;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*#camera-image {
+	margin-bottom: 20px;
+	margin-top: 50px;
+	width: 100%;
+}*/
+
+.jumbotron {
+	margin-top: 50px;
+}
+
+.no-border {
+	border: none;
+}
+
+.panel-default>.panel-heading {
+	overflow: auto;
+	min-height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#modal-video-count-added {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/*.modal-header {
+	background-color: #337ab7;
+	color: #ffffff;
+}*/
+
+.modal-body {
+	overflow: auto;
+}
+
+.comment-header {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.comment-content {
+	margin-bottom: 0px;
+}
+
+.no-comments {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.comment-form {
+	padding: 15px;
+}
+
+.comment-form-input {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#submit-comment {
+	float: right;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+textarea {
+	resize: none;
+}
+
+.relative {
+	position: relative;
+}
+
+.delete-comment {
+	color: #a94442;
+	font-size: 25px;
+	margin-right: 20px;
+	position: absolute;
+	right: 0px;
+	top: 15px;
+}
+
+.delete-comment:hover {
+	color: #a94442;
+	font-weight: bolder;
+}
+
+.entire-container {
+	margin-bottom: 10px;
+	min-height: 230px;
+}
+
+/*.video-title {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}*/
+
+.video-container {
+	position: relative;
+}
+
+.video-image {
+	backface-visibility: hidden;
+	display: block;
+	height: auto;
+	opacity: 1;
+	transition: .5s ease;
+	width: 100%;
+}
+
+.middle {
+	left: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transition: .5s ease;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+}
+
+.video-container:hover .video-image {
+	opacity: 0.3;
+}
+
+.video-container:hover .middle {
+	opacity: 1;
+}
+
+.fa-user-o, .fa-commenting-o {
+	margin-right: 50px;
+}
+
+@media screen and (max-width: 1149px) {
+	.fa-user-o, .fa-commenting-o {
+		margin-right: 25px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.fa-user-o, .fa-commenting-o {
+		margin-right: 50px;
+	}
+}
+
+@media screen and (max-width: 869px) {
+	.fa-user-o, .fa-commenting-o {
+		margin-right: 33px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.fa-user-o, .fa-commenting-o {
+		margin-right: 50px;
+	}
+}
+
