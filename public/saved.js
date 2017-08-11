@@ -1,25 +1,3 @@
-// PANEL OPTION
-// function displayResults(results) {
-// 	results.forEach(function(result) {
-// 		var div = $("<div>").addClass("panel panel-default");
-// 		var panelHeadingTitle = $("<a>").addClass("title").attr("href", result.content_url).text(result.title);
-// 		var panelHeadingChannel = $("<a>").addClass("channel").attr("href", result.channel_url).text(result.channel);
-// 		var unsaveButton = $("<button>").addClass("btn btn-danger unsave").attr("data-id", result._id).text("Delete From Saved");
-// 		var commentsButton = $("<button>").addClass("btn btn-info comments").attr("data-id", result._id).text("Video Comments");
-// 		var heading = $("<div>").addClass("panel-heading").html(panelHeadingTitle);
-// 		heading.append(" by ");
-// 		heading.append(panelHeadingChannel);
-// 		heading.append(unsaveButton);
-// 		heading.append(commentsButton);
-
-// 		var body = $("<div>").addClass("panel-body description").text(result.description);
-
-// 		div.append(heading);
-// 		div.append(body);
-// 		$("#videos").prepend(div);
-// 	});
-// };
-
 function displayResults(results) {
 	results.forEach(function(result) {
 		var div = $("<div>").addClass("col-md-3 col-sm-4 col-xs-12 entire-container");
@@ -60,15 +38,20 @@ $(document).on("click", ".comments", function() {
 	$.get("/saved_videos/" + id, function(result) {
 		if (result.comments.length === 0) {
 			$(".modal-comments").html($("<h4>").addClass("no-comments").text("No comments on this video. Be the first to comment!"));
+			$(".modal-comments").append("<hr>");
+			// $(".share-thoughts").css(""))
 		} else {
 			var ul = $("<ul>").addClass("list-group");
 			result.comments.forEach(function(comment) {
 				var li = $("<li>").addClass("list-group-item relative");
-				var commentName = $("<p>").addClass("comment-name").text(comment.author + " || " + moment(comment.createdAt).format("MMM DD, h:mm a"));
+				var commentNameDate = $("<p>").html($("<span>").addClass("comment-name").text(comment.author));
+				var commentDate = $("<span>").addClass("comment-date").text(moment(comment.createdAt).format("MMM DD, h:mm a"));
+				commentNameDate.append("&bull;");
+				commentNameDate.append(commentDate);
 				var commentContent = $("<p>").addClass("comment-content").text(comment.body);
 				var deleteButton = $("<a>").addClass("delete-comment").attr("href", "#").attr("data-video-id", result._id).attr("data-comment-id", comment._id).html("&times;");
 
-				li.html(commentName);
+				li.html(commentNameDate);
 				li.append(commentContent);
 				li.append(deleteButton);
 
@@ -88,9 +71,6 @@ $(document).on("click", ".unsave", function() {
 
 	$.get("/unsave/" + id);
 	$(this).closest("div.col-md-3.col-sm-4.col-xs-12.entire-container").remove();
-
-	// PANEL OPTION
-	// $(this).closest("div.panel.panel-default").remove();
 });
 
 // Click "Save Comment" of specific video

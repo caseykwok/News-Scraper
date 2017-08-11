@@ -65,7 +65,7 @@ router.post("/saved_videos/:id", function(req, res) {
 });
 
 router.get("/saved_videos/:videoId/delete_comment/:commentId", function(req, res) {
-	Comment.remove({"_id": req.params.commentId});
+	Comment.remove({"_id": req.params.commentId}).exec();
 	Content.findOneAndUpdate({"_id": req.params.videoId}, {$pull: {"comments": req.params.commentId}}, function(err, doc) {
 		if (err) {
 			console.log("Error: ", err);

@@ -1,23 +1,3 @@
-// PANEL OPTION
-// function displayResults(results) {
-// 	results.forEach(function(result) {
-// 		var div = $("<div>").addClass("panel panel-default");
-// 		var panelHeadingTitle = $("<a>").addClass("title").attr("href", result.content_url).text(result.title);
-// 		var panelHeadingChannel = $("<a>").addClass("channel").attr("href", result.channel_url).text(result.channel);
-// 		var saveButton = $("<button>").addClass("btn btn-success save").attr("data-id", result._id).text("Save Video");
-// 		var heading = $("<div>").addClass("panel-heading").html(panelHeadingTitle);
-// 		heading.append(" by ");
-// 		heading.append(panelHeadingChannel);
-// 		heading.append(saveButton);
-
-// 		var body = $("<div>").addClass("panel-body description").text(result.description);
-
-// 		div.append(heading);
-// 		div.append(body);
-// 		$("#videos").prepend(div);
-// 	});
-// };
-
 function displayResults(results) {
 	results.forEach(function(result) {
 		var div = $("<div>").addClass("col-md-3 col-sm-4 col-xs-12 entire-container");
@@ -74,7 +54,4 @@ $(document).on("click", ".save", function() {
 
 	$.get("/save/" + id);
 	$(this).closest("div.col-md-3.col-sm-4.col-xs-12.entire-container").remove();
-
-	// PANEL OPTION
-	// $(this).closest("div.panel.panel-default").remove();
 });

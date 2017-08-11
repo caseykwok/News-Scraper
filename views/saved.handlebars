@@ -9,18 +9,16 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">Mongo Scraper</a>
+			<a class="navbar-brand" href="/"><i class="fa fa-youtube-play" id="youtube-icon" aria-hidden="true"></i> <span id="youtube-title">YouTube Trending Videos</span></a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/">Home</a></li>
-				<li><a href="/saved">Saved Videos</a></li>
+				<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+				<li><a href="/saved"><i class="fa fa-bookmark" aria-hidden="true"></i> Saved Videos</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
-
-{{!-- <img class="img-fluid" id="camera-image" src="static/assets/images/camera.jpg" alt="Camera Image"> --}}
 
 <div class="jumbotron jumbotron-fluid text-center">
 	<div class="container">
@@ -39,20 +37,21 @@
 		<div id="video-comments" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<div class="modal-header">
+					<div class="modal-header comments-modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<h3 class="comment-header">Comments</h3>
 					</div>
 					<div class="modal-body">
 						<div class="modal-comments"></div>
+						<h4 class="share-thoughts">Share Your Thoughts</h4>
 						<form class="comment-form">
 							<div class="form-group">
 								<input type="text" class="form-control comment-form-input" id="name-input" placeholder="Name">
 							</div>
 							<div class="form-group">
-								<textarea class="form-control comment-form-input" rows="2" id="comment-input" placeholder="Comment"></textarea>
+								<textarea class="form-control comment-form-input" rows="1" id="comment-input" placeholder="Comment"></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary" id="submit-comment">Save Comment</button>							
+							<button type="submit" class="btn btn-primary" id="submit-comment">Save Comment</button>			
 						</form>
 					</div>
 				</div>

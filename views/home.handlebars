@@ -9,24 +9,22 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">Mongo Scraper</a>
+			<a class="navbar-brand" href="/"><i class="fa fa-youtube-play" id="youtube-icon" aria-hidden="true"></i> <span id="youtube-title">YouTube Trending Videos</span></a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/">Home</a></li>
-				<li><a href="/saved">Saved Videos</a></li>
+				<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+				<li><a href="/saved"><i class="fa fa-bookmark" aria-hidden="true"></i> Saved Videos</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-{{!-- <img class="img-fluid" id="camera-image" src="static/assets/images/camera.jpg" alt="Camera Image"> --}}
-
 <div class="jumbotron jumbotron-fluid text-center">
 	<div class="container">
 		<h1 class="display-3">Mongo Scraper</h1>
 		<p class="lead">YouTube Trending Videos</p>
-		<button class="btn btn-danger" id="scrape" data-target="#videos-added">Scrape New Videos</button>
+		<button class="btn btn-danger" id="scrape" data-target="#videos-added">Scrape New Videos <i class="fa fa-video-camera" aria-hidden="true"></i></button>
 	</div>
 </div>
 
@@ -47,7 +45,7 @@
 						<h3 id="modal-video-count-added"></h3>
 					</div>
 					<div class="modal-footer no-border">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" id="close-videos-added" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>

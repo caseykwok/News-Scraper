@@ -1,3 +1,8 @@
+body {
+	color: #000000;
+	font-family: 'Roboto', sans-serif;
+}
+
 .navbar {
 	margin-bottom: 0px;
 }
@@ -13,13 +18,39 @@ a:hover {
 	text-decoration: none;
 }
 
-/*#camera-image {
-	margin-bottom: 20px;
-	margin-top: 50px;
-	width: 100%;
-}*/
+#youtube-icon {
+	color: #cc181e;
+	margin-right: 5px;
+}
+
+#youtube-title {
+	color: #000000;
+}
+
+ul.nav.navbar-nav.navbar-right {
+	margin-right: 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #494949;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	background-color: #494949;
+	color: #ffffff;
+}
+
+.fa-home, .fa-bookmark {
+	color: inherit;
+	margin-right: 5px;
+}
+
+.fa-video-camera {
+	margin-left: 5px;
+}
 
 .jumbotron {
+	background-color: #f1f1f1;
 	margin-top: 50px;
 }
 
@@ -36,18 +67,30 @@ a:hover {
 	text-align: center;
 }
 
+#scrape {
+	background-color: #cc181e;
+	border-color: #cc181e;
+	font-size: 15px;
+	padding: 10px 20px;
+}
+
 #modal-video-count-added {
 	margin-bottom: 30px;
 	text-align: center;
 }
 
-/*.modal-header {
-	background-color: #337ab7;
-	color: #ffffff;
-}*/
+#close-videos-added {
+	background-color: #cc181e;
+	border: #cc181e;
+}
+
+.comments-modal-header {
+	background-color: #f1f1f1;
+}
 
 .modal-body {
 	overflow: auto;
+	padding: 25px;
 }
 
 .comment-header {
@@ -55,17 +98,30 @@ a:hover {
 	margin-top: 10px;
 }
 
+.comment-name {
+	color: #000000;
+	font-size: 15px;
+	font-weight: bolder;
+	margin-right: 10px;
+}
+
+.comment-date {
+	color: #808080;
+	font-size: 13px;
+	margin-left: 10px;
+}
+
 .comment-content {
 	margin-bottom: 0px;
 }
 
 .no-comments {
-	margin-bottom: 20px;
+	margin-bottom: 35px;
 	text-align: center;
 }
 
 .comment-form {
-	padding: 15px;
+	padding: 5px;
 }
 
 .comment-form-input {
@@ -76,7 +132,14 @@ a:hover {
 	box-shadow: none;
 }
 
+.share-thoughts {
+	font-weight: bolder;
+	margin-top: 40px;
+}
+
 #submit-comment {
+	background-color: #cc181e;
+	border-color: #cc181e;
 	float: right;
 	margin-bottom: 10px;
 	margin-top: 5px;
@@ -91,7 +154,7 @@ textarea {
 }
 
 .delete-comment {
-	color: #a94442;
+	color: #cc181e;
 	font-size: 25px;
 	margin-right: 20px;
 	position: absolute;
@@ -100,21 +163,23 @@ textarea {
 }
 
 .delete-comment:hover {
-	color: #a94442;
+	color: #a81217;
 	font-weight: bolder;
 }
 
 .entire-container {
 	margin-bottom: 10px;
-	min-height: 230px;
+	min-height: 240px;
 }
 
-/*.video-title {
-	display: block;
+.video-title {
+/*	display: block;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
-}*/
+	white-space: nowrap;*/
+	font-weight: bolder;
+	line-height: 1.3em;
+}
 
 .video-container {
 	position: relative;
@@ -147,8 +212,21 @@ textarea {
 	opacity: 1;
 }
 
+.fa-bookmark-o, .fa-trash-o {
+	color: #cc181e;
+}
+
+.fa-bookmark-o:hover, .fa-trash-o:hover {
+	color: #a81217;
+}
+
 .fa-user-o, .fa-commenting-o {
+	color: #cc181e;
 	margin-right: 50px;
+}
+
+.fa-user-o:hover, .fa-commenting-o:hover {
+	color: #a81217;
 }
 
 @media screen and (max-width: 1149px) {
